@@ -20,7 +20,10 @@ struct FeaturedTabView: View {
             }
         } //: TAB
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .padding(.vertical,20)
+        .frame(height: UIScreen.main.bounds.width / 1.475)
     }
+
 }
 
 struct FeaturedTabView_Previews: PreviewProvider {

@@ -51,6 +51,9 @@ struct NavigationBarView: View {
                 } //: ZSTACK
             } //: BUTTON
         } //: HSTACK
+        .padding()
+        .background(Color.white)
+        .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 5)
     }
 }
 
