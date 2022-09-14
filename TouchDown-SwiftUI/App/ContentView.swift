@@ -25,9 +25,13 @@ struct ContentView: View {
                         TitleView(title: "Helmet")
                         
                         ProductGridView()
+                        
+                        TitleView(title : "Brands")
+                        
+                        BrandGridView()
 
                         FooterView()
-                            .padding(.horizontal)
+//                            .padding(.horizontal)
                     } //: VSTACK
                 } //: SCROLL
             } //: VSTACK

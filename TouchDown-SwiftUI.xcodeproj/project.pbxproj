@@ -18,6 +18,9 @@
 		BF39ECCE28CF2D3F00F82ADB /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = BF39ECCA28CF2D3F00F82ADB /* product.json */; };
 		BF39ECCF28CF2D3F00F82ADB /* brand.json in Resources */ = {isa = PBXBuildFile; fileRef = BF39ECCB28CF2D3F00F82ADB /* brand.json */; };
 		BF39ECD028CF2D3F00F82ADB /* player.json in Resources */ = {isa = PBXBuildFile; fileRef = BF39ECCC28CF2D3F00F82ADB /* player.json */; };
+		BF4EC5A628D205F00058B3D7 /* BrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EC5A528D205F00058B3D7 /* BrandModel.swift */; };
+		BF4EC5A828D206380058B3D7 /* BrandItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EC5A728D206380058B3D7 /* BrandItemView.swift */; };
+		BF4EC5AA28D207270058B3D7 /* BrandGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4EC5A928D207270058B3D7 /* BrandGridView.swift */; };
 		BFF232CC28D0904E0056C563 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF232CB28D0904E0056C563 /* Constant.swift */; };
 		BFF232CE28D090CB0056C563 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF232CD28D090CB0056C563 /* FooterView.swift */; };
 		BFF232D028D092ED0056C563 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF232CF28D092ED0056C563 /* NavigationBarView.swift */; };
@@ -69,6 +72,9 @@
 		BF39ECCB28CF2D3F00F82ADB /* brand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand.json; sourceTree = "<group>"; };
 		BF39ECCC28CF2D3F00F82ADB /* player.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = player.json; sourceTree = "<group>"; };
 		BF39ECD228CF2D9B00F82ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BF4EC5A528D205F00058B3D7 /* BrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModel.swift; sourceTree = "<group>"; };
+		BF4EC5A728D206380058B3D7 /* BrandItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandItemView.swift; sourceTree = "<group>"; };
+		BF4EC5A928D207270058B3D7 /* BrandGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandGridView.swift; sourceTree = "<group>"; };
 		BFF232CB28D0904E0056C563 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BFF232CD28D090CB0056C563 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		BFF232CF28D092ED0056C563 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
@@ -223,6 +229,8 @@
 				BFF232E328D0CC560056C563 /* TitleView.swift */,
 				BFF232E728D0CD970056C563 /* ProductItemView.swift */,
 				BFF232E928D0CFC10056C563 /* ProductGridView.swift */,
+				BF4EC5A728D206380058B3D7 /* BrandItemView.swift */,
+				BF4EC5A928D207270058B3D7 /* BrandGridView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				BFF232D328D097970056C563 /* PlayerModel.swift */,
 				BFF232DB28D0C7130056C563 /* CategoryModel.swift */,
 				BFF232E528D0CD120056C563 /* ProductModel.swift */,
+				BF4EC5A528D205F00058B3D7 /* BrandModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,6 +403,7 @@
 				BFF232D828D0992D0056C563 /* FeaturedItemView.swift in Sources */,
 				BFF232E828D0CD970056C563 /* ProductItemView.swift in Sources */,
 				BF39ECA028CF2CF900F82ADB /* TouchDown_SwiftUIApp.swift in Sources */,
+				BF4EC5AA28D207270058B3D7 /* BrandGridView.swift in Sources */,
 				BFF232CC28D0904E0056C563 /* Constant.swift in Sources */,
 				BFF232E028D0C8FF0056C563 /* CategoryGridView.swift in Sources */,
 				BFF232DC28D0C7130056C563 /* CategoryModel.swift in Sources */,
@@ -402,9 +412,11 @@
 				BFF232DE28D0C7910056C563 /* CategoryItemView.swift in Sources */,
 				BFF232DA28D099DE0056C563 /* FeaturedTabView.swift in Sources */,
 				BFF232D428D097970056C563 /* PlayerModel.swift in Sources */,
+				BF4EC5A828D206380058B3D7 /* BrandItemView.swift in Sources */,
 				BFF232E428D0CC560056C563 /* TitleView.swift in Sources */,
 				BFF232EA28D0CFC10056C563 /* ProductGridView.swift in Sources */,
 				BFF232E628D0CD120056C563 /* ProductModel.swift in Sources */,
+				BF4EC5A628D205F00058B3D7 /* BrandModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,8 +581,8 @@
 				INFOPLIST_FILE = "TouchDown-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -599,8 +611,8 @@
 				INFOPLIST_FILE = "TouchDown-SwiftUI/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
