@@ -9,12 +9,19 @@ import SwiftUI
 
 struct ProductGridView: View {
     //MARK: - PROPERTIES
+    @EnvironmentObject var shop : Shop
     
     //MARK: - BODY
     var body: some View {
         LazyVGrid(columns: gridLayout, spacing: 15) {
             ForEach(products) { product in
-                ProductItemView(product: product)
+                ProductItemView(product: product).onTapGesture {
+                    feedback.impactOccurred()
+                    withAnimation(.easeOut) {
+                        shop.selectedProduct = product
+                        shop.showingProduct = true
+                    }
+                }
             } //: LOOP
         } //: GRID
         .padding(15)

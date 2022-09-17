@@ -9,33 +9,38 @@ import SwiftUI
 
 struct ContentView: View {
     //MARK: - PROPETIES
+    @EnvironmentObject var shop : Shop
     
     //MARK: - BODY
     var body: some View {
         ZStack {
-            VStack {
-                NavigationBarView()
-                
-                ScrollView(.vertical, showsIndicators: true) {
-                    VStack(spacing:0) {
-                        FeaturedTabView()
-                        
-                        CategoryGridView()
-                        
-                        TitleView(title: "Helmet")
-                        
-                        ProductGridView()
-                        
-                        TitleView(title : "Brands")
-                        
-                        BrandGridView()
+            if shop.showingProduct == false && shop.selectedProduct == nil {
+                VStack(spacing : 0) {
+                    NavigationBarView()
+                    
+                    ScrollView(.vertical, showsIndicators: true) {
+                        VStack(spacing:0) {
+                            FeaturedTabView()
+                            
+                            CategoryGridView()
+                            
+                            TitleView(title: "Helmet")
+                            
+                            ProductGridView()
+                            
+                            TitleView(title : "Brands")
+                            
+                            BrandGridView()
 
-                        FooterView()
-//                            .padding(.horizontal)
-                    } //: VSTACK
-                } //: SCROLL
-            } //: VSTACK
-            .background(colorBackground.ignoresSafeArea(.all, edges:.all))
+                            FooterView()
+    //                            .padding(.horizontal)
+                        } //: VSTACK
+                    } //: SCROLL
+                } //: VSTACK
+                .background(colorBackground.ignoresSafeArea(.all, edges:.all))
+            } else {
+                ProductDetailView()
+            }
         } //: ZSTACK
 
     }
@@ -45,5 +50,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Shop())
     }
 }

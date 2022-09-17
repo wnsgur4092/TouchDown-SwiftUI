@@ -10,6 +10,8 @@ import SwiftUI
 struct ProductDetailView: View {
     //MARK: - PROEPERTIES
     
+    @EnvironmentObject var shop : Shop
+    
     //MARK: - BODY
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -41,7 +43,7 @@ struct ProductDetailView: View {
                 
                 //DESCRIPTION
                 ScrollView(.vertical, showsIndicators: false) {
-                    Text(sampleProducts.description)
+                    Text(shop.selectedProduct?.description ?? sampleProducts.description)
                         .font(.system(.body, design: .rounded))
                         .foregroundColor(.gray)
                         .multilineTextAlignment(.leading)
@@ -59,6 +61,7 @@ struct ProductDetailView: View {
                 Color.white
                     .clipShape(CustomShape())
                     .padding(.top, -105)
+                    .padding(.bottom, -15)
             )
             
                 
@@ -67,7 +70,7 @@ struct ProductDetailView: View {
         .zIndex(0)
         .ignoresSafeArea(.all, edges: .all)
         .background(
-            Color(red: sampleProducts.red, green: sampleProducts.green, blue: sampleProducts.blue)
+            Color(red: shop.selectedProduct?.red ?? sampleProducts.red, green: shop.selectedProduct?.green ?? sampleProducts.green, blue: shop.selectedProduct?.blue ?? sampleProducts.blue)
         ).ignoresSafeArea(.all,edges: .all)
     }
 }
@@ -75,6 +78,6 @@ struct ProductDetailView: View {
 //MARK: - PREVIEW
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView().previewLayout(.fixed(width: 375, height: 812))
+        ProductDetailView().environmentObject(Shop()).previewLayout(.fixed(width: 375, height: 812))
     }
 }
